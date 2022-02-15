@@ -1,4 +1,4 @@
-module github.com/PaesslerAG/jsonpath
+module github.com/meta-quick/jsonpath
 
 go 1.17
 
