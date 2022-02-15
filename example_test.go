@@ -2,8 +2,8 @@ package jsonpath_test
 
 import (
 	"context"
-	"encoding/json"
 	"fmt"
+	"github.com/bytedance/sonic"
 	"os"
 
 	"github.com/PaesslerAG/gval"
@@ -14,7 +14,7 @@ import (
 func ExampleGet() {
 	v := interface{}(nil)
 
-	json.Unmarshal([]byte(`{
+	sonic.Unmarshal([]byte(`{
 		"welcome":{
 				"message":["Good Morning", "Hello World!"]
 			}
@@ -35,7 +35,7 @@ func ExampleGet() {
 func ExampleGet_wildcard() {
 	v := interface{}(nil)
 
-	json.Unmarshal([]byte(`{
+	sonic.Unmarshal([]byte(`{
 		"welcome":{
 				"message":["Good Morning", "Hello World!"]
 			}
@@ -59,7 +59,7 @@ func ExampleGet_wildcard() {
 func ExampleGet_filter() {
 	v := interface{}(nil)
 
-	json.Unmarshal([]byte(`[
+	sonic.Unmarshal([]byte(`[
 		{"key":"a","value" : "I"},
 		{"key":"b","value" : "II"},
 		{"key":"c","value" : "III"}
@@ -89,7 +89,7 @@ func Example_gval() {
 	}
 
 	v := interface{}(nil)
-	err = json.Unmarshal([]byte(`{
+	err = sonic.Unmarshal([]byte(`{
 		"device 1":{
 			"name": "fancy device",
 			"ping": true,

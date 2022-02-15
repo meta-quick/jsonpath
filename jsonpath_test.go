@@ -2,8 +2,8 @@ package jsonpath_test
 
 import (
 	"context"
-	"encoding/json"
 	"fmt"
+	"github.com/bytedance/sonic"
 	"reflect"
 	"sort"
 	"testing"
@@ -454,7 +454,7 @@ func (tt jsonpathTest) test(t *testing.T) {
 		return
 	}
 	var v interface{}
-	err = json.Unmarshal([]byte(tt.data), &v)
+	err = sonic.Unmarshal([]byte(tt.data), &v)
 	if err != nil {
 		t.Fatalf("could not parse json input: %v", err)
 	}
