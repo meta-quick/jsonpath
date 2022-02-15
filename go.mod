@@ -4,6 +4,7 @@ go 1.17
 
 require (
 	github.com/PaesslerAG/gval v1.1.2
+	github.com/PaesslerAG/jsonpath v0.1.0
 	github.com/bytedance/sonic v1.0.0
 )
 
